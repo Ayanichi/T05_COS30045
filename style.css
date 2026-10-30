@@ -16,3 +16,11 @@ main { max-width: 1300px; margin: 0 auto; padding: 1.5rem 1rem; }
 .axis-label { font-size: 13px; fill: #333; }
 .error { color: #b00020; font-size: .9rem; }
 footer { text-align: center; padding: 1rem; font-size: .8rem; color: #666; background: #e4e8eb; }
+
+/* Toggle buttons above the bar chart */
+.toggle { display: flex; gap: 8px; margin-bottom: .75rem; }
+.toggle-btn {
+  border: 1px solid #4caf50; background: #fff; color: #2e7d32;
+  padding: .35rem .9rem; border-radius: 999px; cursor: pointer; font-size: .85rem; font-weight: 600;
+}
+.toggle-btn.active { background: #4caf50; color: #fff; }

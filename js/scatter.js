@@ -4,7 +4,7 @@
   const iw = W - m.left - m.right, ih = H - m.top - m.bottom;
   const c = CONFIG.tvCols;
 
-  d3.csv(CONFIG.tvData, d => ({ star: +d[c.star], energy: +d[c.energy], tech: d[c.tech] }))
+  d3.csv(CONFIG.files.tv, d => ({ star: +d[c.star], energy: +d[c.energy], tech: normTech(d[c.tech]) }))
     .then(data => {
       data = data.filter(d => !isNaN(d.star) && !isNaN(d.energy)); // drop unparseable rows
       console.log("scatter rows:", data.length, data[0]);
