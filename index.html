@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>D3 Charts Dashboard – TV power consumption</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>D3 Charts Dashboard</h1>
+    <p>TV power consumption</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>How much energy does a TV use?</h2>
+      <p>These four charts explore TV energy use and electricity prices. Start with the scatter plot to see how star rating relates to energy use,
+      then compare screen technologies and the trend in electricity prices over time.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Star rating vs energy consumption</h2>
+        <p>Each dot is one TV model, coloured by screen technology. Higher star ratings tend to use less energy.</p>
+        <div id="scatter-chart" class="chart"></div>
+      </section>
+
+      <section class="card">
+        <h2>Electricity price over time</h2>
+        <p>Average price per megawatt hour by year.</p>
+        <div id="line-chart" class="chart"></div>
+      </section>
+
+      <section class="card">
+        <h2>Mean energy use by screen technology</h2>
+        <p>Average annual consumption (kWh/year) for each technology.</p>
+        <div id="bar-chart" class="chart"></div>
+      </section>
+
+      <section class="card">
+        <h2>Share of TVs by screen technology</h2>
+        <p>Proportion of models in the data set for each technology.</p>
+        <div id="donut-chart" class="chart"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer><p>Built with D3.js. Code written with AI assistance (GitHub Copilot / Claude) and reviewed by the author.</p></footer>
+
+  <!-- D3 first, then shared config, then one file per chart -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/scatter.js"></script>
+  <script src="js/line.js"></script>
+  <script src="js/bar.js"></script>
+  <script src="js/donut.js"></script>
+</body>
+</html>
